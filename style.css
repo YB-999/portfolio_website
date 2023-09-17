@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap");
+
+*, *::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Questrial", sans-serif;
+  }
+  html,
+
+body{
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", san-serif;
+    background-color: #333;
+}
+
+.logo{
+    width: 85px;
+}
+
+  
+  .splash-content {
+    text-align: center;
+  }
+
+
+/* Define the animation */
+@keyframes splashAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply the animation to the splash screen */
+  #splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3b58d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .splash-content img {
+    max-width: 400px;
+    animation: rotation 4s infinite linear;
+  }
+  
+  
+
+/*
+header{
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    padding: 0.9rem 0;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid rgba(181, 181, 181, 0.283);
+}
+
+header nav{
+    background-color: rgba(49, 68, 49, 0.611);
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+header ul a{
+    text-decoration: none;
+    color: white;
+    padding: 0 0.8rem;
+    font-weight: 300;
+    font-size: 0.90rem;
+}
+
+.hamburger{
+    padding-left: 1rem;
+}
+
+.hamburger a{
+    padding: 0;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    border-radius: 50%;
+    background-color: rgba(115, 115, 115, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger .bar{
+    position: relative;
+    width: 52%;;
+    height: 1.5px;
+    background-color: white;
+    border-radius: 2px;
+}
+.hamburger .bar::before, .hamburger .bar::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 2px;
+}
+.hamburger .bar::before{
+    top: -4.5px;
+
+}
+
+.hamburger .bar::after{
+    top: 4.5px;
+    
+}
+*/
+main {
+    position: relative;
+    background-color: #353;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.bg-img {
+    position: absolute;
+    width: 2800px;
+    top: calc(50% - 160px);
+    left: calc(50% + 50px);
+    z-index: 1;
+}
+
+.fog-7 {
+    position: absolute;
+    z-index: 2;
+    width: 1900px;
+    top: calc(50% - 100px);
+    left: calc(50% + 300px);
+}
+
+.mountain-10 {
+    position: absolute;
+    z-index: 3;
+    top: calc(50% + 69px);
+    width: 870px;
+    left: calc(50% + 230px);  
+}
+
+.fog-6 {
+    position: absolute;
+    z-index: 4;
+    top: calc(50% + 95px);
+    left: calc(50% + 400px);
+    width: 1833px;
+}
+
+.mountain-9 {
+    position: absolute;
+    z-index: 5;
+    width: 463px;
+    top: calc(50% + 11px);
+    left: calc(50% - 457px);
+}
+
+.mountain-8 {   
+    position: absolute;
+    z-index: 6;
+    top: calc(50% + 96px);
+    width: 786px;
+    left: calc(50% - 202px);  
+}
+
+.fog-5 {
+    position: absolute;
+    z-index: 7;
+    top: calc(50% + 171px);
+    left: calc(50% + 29px);
+    width: 449px;
+}
+
+.mountain-7 {
+    position: absolute;
+    z-index: 8;
+    width: 515px;
+    top: calc(50% + 134px);
+    left: calc(50% + 305px);
+}
+
+.text{
+    position: absolute;
+    z-index: 9;
+    left: 50%;
+    top: 35%;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(229, 255, 229);
+    pointer-events: auto;
+}
+.text h2{
+   font-weight: 110;
+   font-size: 4rem; 
+}
+.text h1{
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 0.88;
+    display: inline-block;
+    white-space: nowrap;
+    padding-top: 15px;
+ }
+
+.mountain-6 {
+    position: absolute;
+    z-index: 10;
+    top: calc(50% + 86.5px);
+    width: 383.5px;
+    left: calc(50% + 590px);
+}
+
+.fog-4 {
+    position: absolute;
+    z-index: 11;
+    top: calc(50% + 242px);
+    left: calc(50% - 64px);
+    width: 543px;
+}
+
+.mountain-5 {
+    position: absolute;
+    z-index: 12;
+    top: calc(50% + 269px);
+    width: 583px;
+    left: calc(50% + 100px);
+}
+
+.fog-3 {
+    position: absolute;
+    z-index: 13;
+    top: calc(50% + 149px);
+    left: calc(50% - 28px);
+    width: 435px;
+}
+
+.mountain-4 {
+    position: absolute;
+    z-index: 14;
+    top: calc(50% + 255px);
+    width: 717px;
+    left: calc(50% - 381.5px);
+}
+
+.mountain-3 {
+    position: absolute;
+    z-index: 15;
+    top: calc(50% + 133px);
+    left: calc(50% + 736px);
+    width: 419px;
+}
+
+.fog-2 {
+    position: absolute;
+    z-index: 16;
+    top: calc(50% + 177px);
+    left: calc(50% - 30px);
+    width: 1418px;
+}
+
+.mountain-2 {
+    position: absolute;
+    z-index: 17;
+    top: calc(50% + 188px);
+    left: calc(50% + 412px);
+    width: 625px;
+}
+
+.mountain-1 {
+    position: absolute;
+    z-index: 18;
+    top: calc(50% + 91.5px);
+    left: calc(50% - 700px);
+    width: 450px;
+}
+.sun-rays{
+    position: absolute;
+    z-index: 19;
+    top: 0;
+    right:0;
+    width: 595px;
+    pointer-events: none;
+   
+}
+.black-shadow{
+    position: absolute;
+    z-index: 20;
+   bottom: 0;
+   right:0;
+   width: 100%;
+   pointer-events: none;
+}
+.fog-1{
+    position: absolute;
+    z-index: 21;
+    width: 1800px;
+    top: calc(100% - 355px);
+    left: 50%;
+    
+}
+.vignette{
+    position: absolute;
+    z-index: 30;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:radial-gradient(ellipse at center,rgba(0,0,0,0) 65%,rgba(0,0,0,0.7));
+    pointer-events: none;
+}
+.parallax{
+    pointer-events: none;
+    transition:0.45s cubic-bezier(.2,.49,.32,.99);
+}
+.Parallax{
+    transition:0.45s cubic-bezier(.2,.49,.32,.99);
+}
+::selection{
+    background-color: #0b372dbb;
+}
+
+@media (max-width:1100px){
+    .text h1{
+        font-size: 4rem;
+    }
+    .text h2{
+        font-size: 2.5rem;
+    }
+}
+
+/*@media (max-width:725px){
+    .text h1{
+        font-size: 3.5rem;
+        line-height: 1.1;
+    }
+    .text h2{
+        font-size: 2rem;
+    }
+    header nav{
+        padding:0 1rem;
+    }
+
+    .logo{
+        width: 75px;
+    }
+    header ul a{
+        font-size:0.73rem;
+        padding: 0 0.9rem;
+    }
+
+    .hamburger{
+        padding-left: 0.9rem;
+    }
+    .hamburger a{
+        height:30px;
+        width: 30px;
+    }
+}
+*/
+@media (max-width:520px){
+    .text h1{
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+    .text h2{
+        font-size: 1.3rem;
+    }
+   
+}
+
+
+/*Button home screen*/
+
+.wrap {
+    pointer-events: auto;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    z-index: 500;
+    
+  }
+
+  .button {
+    min-width: 300px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    z-index: 500;
+    }
+  
+  button::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .button:hover, .button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  button:hover::before, button:focus::before {
+    opacity: 1;
+  }
+  
+  button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
+
+  .hidden {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .visible {
+    opacity: 1;
+ }

@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background: url('./contact_bk.png') no-repeat top center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bkButton {
+	position: fixed;
+    top: 0;
+    right: 0;
+	margin: 20px 20px 0 0 ;
+	background-color: rgba(0,0,0,0.8);
+	color: #c5ecfd;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 20px;
+	font-size: 16px;
+	cursor: pointer;
+	animation: neon 3s linear infinite;
+  }
+
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 100%;
+  max-width: 800px;
+  background: rgba(0,0,0,0.8);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	animation: neon 3s linear infinite;
+}
+
+@keyframes neon {
+	
+	50% {
+		box-shadow: 0 0 5px #009688, 0 0 20px #005a96, 0 0 40px #020096, 0 0 60px #960089, 0 0 80px #960000;
+	}
+	
+  }
+
+.wrapper .title h1{
+  color: #c5ecfd;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.contact-form{
+  display: flex;
+}
+
+.input-fields{
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+
+.input-fields,
+.msg{
+  width: 48%;
+}
+
+.input-fields .input,
+.msg textarea{
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid #c5ecfd;
+  padding: 10px;
+  color: #c5ecfd;
+  width: 100%;
+}
+
+.msg textarea{
+  height: 212px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #c5ecfd;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #c5ecfd;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #c5ecfd;
+}
+
+.btn {
+    background: #39b7dd;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px){
+  .contact-form{
+    flex-direction: column;
+  }
+  .msg textarea{
+    height: 80px;
+  }
+  .input-fields,
+  .msg{
+    width: 100%;
+  }
+}
+
+ul {
+    position: absolute;
+    bottom: 20px; /* Adjust the bottom spacing as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  ul li {
+	list-style:none;
+  }
+  ul li a {
+	display:block;
+	position:relative;
+	width:100px;
+	height:100px;
+	line-height:100px;
+	font-size:40px;
+	text-align:center;
+	text-decoration:none;
+	color:#c5ecfd;
+	margin: 0 30px;
+	transition:.5s;
+  }
+  ul li a span {
+	position:absolute;
+	transition: transform .5s;
+  }
+  ul li a span:nth-child(1),
+  ul li a span:nth-child(3){
+	width:100%;
+	height:3px;
+	background:#404040;
+  }
+  ul li a span:nth-child(1) {
+	top:0;
+	left:0;
+	transform-origin: right;
+  }
+  ul li a:hover span:nth-child(1) {
+	transform: scaleX(0);
+	transform-origin: left;
+	transition:transform .5s;
+  }
+  
+  ul li a span:nth-child(3) {
+	bottom:0;
+	left:0;
+	transform-origin: left;
+  }
+  ul li a:hover span:nth-child(3) {
+	transform: scaleX(0);
+	transform-origin: right;
+	transition:transform .5s;
+  }
+  
+  ul li a span:nth-child(2),
+  ul li a span:nth-child(4){
+	width:3px;
+	height:100%;
+	background:#404040;
+  }
+  ul li a span:nth-child(2) {
+	top:0;
+	left:0;
+	transform:scale(0);
+	transform-origin: bottom;
+  }
+  ul li a:hover span:nth-child(2) {
+	transform: scale(1);
+	transform-origin: top;
+	transition:transform .5s;
+  }
+  ul li a span:nth-child(4) {
+	top:0;
+	right:0;
+	transform:scale(0);
+	transform-origin: top;
+  }
+  ul li a:hover span:nth-child(4) {
+	transform: scale(1);
+	transform-origin: bottom;
+	transition:transform .5s;
+  }
+  
+  .linkedin:hover {
+	color: #3b5998;
+  }
+  .linkedin:hover span { 
+	background: #3b5998;
+  }
+  .github:hover {
+	color: white;
+  }
+  .github:hover span { 
+	background: white;
+  }
+  .instagram:hover {
+	color: #c32aa3;
+  }
+  .instagram:hover span { 
+	background: #c32aa3;
+  }
+  .google:hover {
+	color: #dd4b39;
+  }
+  .google:hover span { 
+	background: #dd4b39;
+  }
+  ul li a .github {
+	color: white;
+  }
+  ul li a:hover:nth-child(3) {
+	color: #c32aa3;
+  }
+  ul li a:hover:nth-child(4) {
+	color: #dd4b39;
+  }
