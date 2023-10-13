@@ -9,11 +9,47 @@
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background: #1b1c22;
+    background: #1d2036;
 }
+
+.header {
+    background-color: #1d2036;
+    color: #fff;
+    padding-top: 30px; /* Adjusted padding for top and sides */
+    text-align: center;
+    display: flex; /* Make header a flex container */
+    justify-content: space-between; /* Space-between for left and right alignment */
+    align-items: center; /* Vertically center items */
+    height: 70px; /* Set the height to 30px */
+    width: 100%;
+}
+
+.project {
+    margin-left: 40px; /* Left margin for project name */
+    color: #c5ecfd;
+    font-size: 40px;
+}
+
+.bkButton {
+    margin-right: 40px; /* Right margin for back button */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #c5ecfd;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    animation: neon 3s linear infinite;
+}
+
+@keyframes neon {
+    50% {
+        box-shadow: 0 0 5px #009688, 0 0 10px #FF3E7F, 0 0 15px #03A9F4;
+    }
+}
+
 
 .container {
     position: relative;
@@ -37,6 +73,7 @@ body {
     border-radius: 20px;
     transition: 0.5s;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    animation: neon 3s linear infinite;
 }
 
 .container .card:hover {
@@ -83,7 +120,7 @@ body {
 
 .container .card:hover .content {
     top: 130px;
-    height: 250px;
+    height: fit-content;
 }
 
 .container .card .content h2 {
@@ -98,13 +135,16 @@ body {
 
 .container .card .content a {
     position: relative;
-    top: 15px;
+    top: 10px;
+    margin-bottom: 10px;
     display: inline-block;
-    padding: 12px 25px;
+    width: 80px;
+    height: 25px;
     text-decoration: none;
     background: var(--clr);
     color: white;
-    font-weight: 500;
+    font-weight: 300;
+    border-radius: 10px;
 }
 
 .container .card .content a:hover {
@@ -131,39 +171,33 @@ body {
     }
 }
 
-
-.btn{
-    position: fixed;
+.project{
     top: 0;
-    right: 0;
-    padding: 30px;
-  }
+    left: 0;
+	margin: 20px 20px 0 100px;
+	color: #c5ecfd;
+	font-size: 40px;
+}
   
   .bkButton {
-	background-color: #009688;
-	color: white;
+    top: 0;
+    right: 0;
+	margin: 20px 100px 0 0 ;
+	background-color: rgba(0,0,0,0.8);
+	color: #c5ecfd;
 	border: none;
-	padding: 10px 20px;
-	border-radius: 4px;
+	padding: 5px 20px;
+	border-radius: 20px;
 	font-size: 16px;
 	cursor: pointer;
-	transition: transform 0.3s ease;
-	animation: neon 1.5s linear infinite;
-  }
-  
-  .bkButton:hover {
-	transform: scale(1.1);
+	animation: neon 3s linear infinite;
   }
   
   @keyframes neon {
-	0% {
-	  box-shadow: 0 0 5px #009688, 0 0 20px #009688, 0 0 40px #009688, 0 0 60px #009688, 0 0 80px #009688;
-	}
+	
 	50% {
-	  box-shadow: 0 0 5px #009688, 0 0 20px #009688, 0 0 40px #009688, 0 0 60px #009688, 0 0 100px #009688;
+		box-shadow: 0 0 5px #009688, 0 0 10px #FF3E7F, 0 0 15px #03A9F4;
 	}
-	100% {
-	  box-shadow: 0 0 5px #009688, 0 0 20px #009688, 0 0 40px #009688, 0 0 60px #009688, 0 0 150px #009688;
-	}
+	
   }
   
